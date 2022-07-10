@@ -4,7 +4,6 @@ const fs = require("fs-extra")
 const { ConstructorFragment } = require("ethers/lib/utils")
 
 async function main() {
-    // http://127.0.0.1:7545
     const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL)
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
     const abi = fs.readFileSync(
